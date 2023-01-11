@@ -1,0 +1,46 @@
+{
+  "seller": [
+    {
+      "name": "Heera Kunwar",
+      "email": "kunwarheera@gmail.com",
+      "password": "ik@password",
+      "id": 1
+    },
+    {
+      "name": "Umesh Kunwar",
+      "email": "kunwarumesh@gmail.com",
+      "password": "ik@password",
+      "id": 2
+    },
+    {
+      "name": "Priyanshu Kunwar",
+      "email": "kunwarpriyanshu@gmail.com",
+      "password": "ik@password",
+      "id": 3
+    },
+    {
+      "name": "Isha Kunwar",
+      "email": "kunwarisha9@gmail.com",
+      "password": "ik@password",
+      "id": 4
+    },
+    {
+      "name": "tony",
+      "password": "5MDCFzJPjc",
+      "email": "tony@test.com",
+      "id": 5
+    },
+    {
+      "name": "teater",
+      "password": "5MDCFzJPjc",
+      "email": "tester1@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "test",
+      "password": "5MDCFzJPjc",
+      "email": "tester@gmail.com",
+      "id": 7
+    }
+  ]
+}

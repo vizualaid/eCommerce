@@ -1,0 +1,16 @@
+<!-- <h1>Seller-Auth Page</h1> -->
+
+ <!-- <img class="text-center"class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+
+<div class="seller-auth" >
+   
+    <h2 class="signup"> Seller Sign-Up</h2>
+    <div class="signup" >
+    <form #sellerSignUp="ngForm"(ngSubmit)="signUp(sellerSignUp.value)" class="common-form">
+    <input class="form-input" type="text" name="name" ngModel placeholder="Enter Name"/>
+    <input class="form-input"type="password"  name="password" ngModel placeholder="Enter Password"/>
+    <input class="form-input" type="text"  name="email" ngModel placeholder="Enter Email" />
+    <button class="form-button">SignUp</button>
+    </form>
+    </div>
+    </div>
