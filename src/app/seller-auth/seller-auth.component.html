@@ -1,16 +1,35 @@
 <!-- <h1>Seller-Auth Page</h1> -->
 
- <!-- <img class="text-center"class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
 
-<div class="seller-auth" >
+<div class="seller-auth">
+    
+  
+    
+    <div *ngIf="!showLogin" class="signup">
+        <h2 class="signup" > Seller Sign-Up</h2>
+        <!-- <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+
+         <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="common-form">
+            <input class="form-input" type="text" name="name" ngModel placeholder="Enter Name" />
+            <input class="form-input" type="password" name="password" ngModel placeholder="Enter Password" />
+            <input class="form-input" type="text" name="email" ngModel placeholder="Enter Email" />
+            <button class="form-button">SignUp</button>
+            <a id="hyperlink" class="signup" (click)="openLogin()"> Already have an account? Click Here to Log In</a>
+        </form>
+    </div>
+    <!-- Log in  -->
+
    
-    <h2 class="signup"> Seller Sign-Up</h2>
-    <div class="signup" >
-    <form #sellerSignUp="ngForm"(ngSubmit)="signUp(sellerSignUp.value)" class="common-form">
-    <input class="form-input" type="text" name="name" ngModel placeholder="Enter Name"/>
-    <input class="form-input"type="password"  name="password" ngModel placeholder="Enter Password"/>
-    <input class="form-input" type="text"  name="email" ngModel placeholder="Enter Email" />
-    <button class="form-button">SignUp</button>
-    </form>
+    <div *ngIf="showLogin" class="login" >
+        <h2 class="login" > Seller Log In</h2>
+         <form #sellerlogin="ngForm" (ngSubmit)="login(sellerlogin.value)" class="common-form">
+            <!-- <input class="form-input" type="text" name="name" ngModel placeholder="Enter Name" /> -->
+            <input class="form-input" type="text" name="email" ngModel placeholder="Enter Email" />
+           <input class="form-input" type="password" name="password" ngModel placeholder="Enter Password" />
+             <button class="form-button">Log In</button>
+             <a class="login" id="hyperlink" (click)="openSignup()"> Don't have an account? Click Here to SignUp</a>
+            </form>
     </div>
-    </div>
+
+
+</div>

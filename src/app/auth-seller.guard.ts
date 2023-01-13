@@ -1,3 +1,4 @@
+import { SellerService } from './service/seller.service';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -6,11 +7,19 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthSellerGuard implements CanActivate {
+  constructor(private sellerService:SellerService){}
   canActivate(
+    
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     //redirecting condition
-      return false;
+    if(localStorage.getItem('seller')){
+      return true; 
+    }
+    return this.sellerService.isSellerLogedIn;
   }
+
+   
+
   
 }

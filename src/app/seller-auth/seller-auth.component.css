@@ -1,13 +1,22 @@
-.signup{
+
+.seller-auth{
+    display: flex;
+    text-align: center;
+    /* flex-direction: column; */
+    /* width:max-content; */
+    justify-content: center;
+}
+.signup,.login{
     margin: 30px;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: center;
     color:#FFA400;
+  
 }
-.text-center {
+/* .text-center {
     text-align: center!important;
-}
+} */
 .mb-4{
     display: flex;
     justify-content: center;
@@ -21,7 +30,7 @@ display: align-items-sm-start;
 display: flex;
 margin: 0%;
 flex-direction: column;
-width: 40%;
+width: 100%;
 }
 
 
@@ -36,4 +45,8 @@ padding: 10px;
     border: 2px solid #FFA400;    
     padding: 10px;
     cursor: pointer;
+}
+#hyperlink{
+    cursor: pointer;
+    font-size: small;
 }
