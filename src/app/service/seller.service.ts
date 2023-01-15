@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
-import {SignUp} from '../data-type';
+import {LogIn, SignUp} from '../data-type';
 import { BehaviorSubject } from 'rxjs';
 import {Router} from '@angular/router'
+import { ActivatedRoute } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -27,6 +28,25 @@ export class SellerService {
         this.isSellerLogedIn.next(true);
         this.router.navigate(['seller-home'])
       }
+    }
+    userLogIn(data:LogIn){
+      console.warn(data);
+      //api call code will 
+      this.http
+      .get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`,{observe:"response"})
+      .subscribe((result:any)=>{
+        console.warn(result);
+        if(result && result.body && result.body.length){
+          console.warn("User Loged In");
+          this.isSellerLogedIn.next(true);
+          localStorage.setItem('seller',JSON.stringify(result.body))
+          this.router.navigate(['seller-home'])
+          console.warn('result',result);
+
+        }
+        else 
+        {console.warn("Log In failed");}
+      })
     }
   }
 
