@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import {LogIn, SignUp} from '../data-type';
 import { BehaviorSubject } from 'rxjs';
 import {Router} from '@angular/router'
-import { ActivatedRoute } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class SellerService {
-  isSellerLogedIn=new BehaviorSubject<boolean>(false)
+  isSellerLogedIn=new BehaviorSubject<boolean>(false);
+  isLoginError=new EventEmitter<boolean>(false)
 //api call
   constructor(private http:HttpClient,private router:Router) { }
   userSignUp(data:SignUp){
@@ -45,7 +45,11 @@ export class SellerService {
 
         }
         else 
-        {console.warn("Log In failed");}
+        { 
+          this.isLoginError.emit(true);
+          console.warn("Log In failed");
+          
+        }
       })
     }
   }
