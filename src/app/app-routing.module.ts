@@ -1,3 +1,4 @@
+import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 import { CartComponent } from './cart/cart.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { AboutComponent } from './about/about.component';
@@ -28,6 +29,11 @@ const routes: Routes = [
 {
   path:'cart',
   component: CartComponent,
+},
+{
+  path:'seller-add-product',
+  component: SellerAddProductComponent,
+  canActivate:[AuthSellerGuard]
 },
 
 // {

@@ -1,6 +1,5 @@
 * {
 	box-sizing: border-box;
-	
 }
 /* 
 body {
@@ -15,19 +14,24 @@ body {
 .nav {
     display:flex; 	/* child of nav is in one line */
 	justify-content: space-between;
-	margin-top: 10px;
-	margin-bottom: 5px;
+	
 } 
 .nav ul {
 	display: inline-flex;
-  margin: 0;
+  	margin: 0;
  
   padding: 0;
   list-style: none;
 
 }
+.navright{
+	margin-top: 10px;
+	/* margin-bottom: 10px; */
+}
+.m-nav,.nav-search{
+	margin-top: 15px;
+}
 
- 
 /* h2,
 h3, */
 a {
@@ -42,21 +46,52 @@ a {
 {
 	border: 2px solid #FFA400;
 } */
+.txt{
+	color: white;
+	background-color: #FFA400;
+	font-size: 15px;
+	/* border: 2px solid #FFA400; */
+	text-transform: capitalize;
+
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 20px;
+}
+.txt:hover {
+	color: #FFA400;
+	background-color: white;
+	
+}
+.logo1{
+	color: #FFA400;
+	 padding: 0;
+	font-style:normal;
+	 font-size: 30px;
+}
+.logo2{
+color: #414143;
+/* margin-top: -20px; */
+	font-style: italic;
+	 font-size: 30px;
+	 margin-right: 20px;
+}
+img{
+	margin-right: 10px;
+	margin-top: 10px;
+}
 .logo {
 	margin: 0;
 	font-size: 40px;
-    /* display:flex; */ margin-bottom: 4px;
-	text-transform: uppercase;
+    /* display:flex; */ 
+	/* margin-bottom: 4px; */
+	/* text-transform: uppercase; */
+	display: inline-flex;
+	
 }
 
-.main-nav {
-	margin-top: 0px;
-	margin-bottom: 10px;
-}
-.nav div{
-margin-top: 5px;
 
-}
 .nav .nav-search{
  flex: 1;
  display: -ms-inline-flexbox;
@@ -67,24 +102,27 @@ margin-top: 5px;
 margin-left: 30%;
 margin-right: 5%; */
 }
-
+/* .nav-search{
+	border: 2px solid #FFA400;
+} */
 .nav .nav-search input{
 	flex:1;
 	color: #232528;
 	border: 2px solid #FFA400;
 	border-right: 0;
-	height: 40px;
+	height:fit-content;
 	padding: 10px;
-	
-	
+	margin-top:0.1px ;
+	height: 44.3px;
 }
 .nav .nav-search button{
 	width: 40px;
 	flex:1;
 	color: #FFA400;
+	/* background-color: #414143; */
 	text-shadow: #232528;
-	border: 2px solid #FFA400;
-	height: 40px;
+	border: 2px solid #FFA400;	
+	height: 44.3px;
 	
 	border-left: 0;
 }
@@ -92,8 +130,10 @@ margin-right: 5%; */
 .logo a{
 	margin-top: 0px;
 	color: #FFA400;
+	padding: 0;
 	/* text-align: center; */
 	/* display: block; */
+	
 }
 
 .main-nav a {
@@ -103,8 +143,15 @@ margin-right: 5%; */
 	text-align: center;
 	display: block;
 }
+.main-nav2 a {
+	color: #232528;
+	padding: 5px 15px;
+	font-size: 15px;
+	text-align: center;
+	display: block;
+}
 
-.main-nav a:hover {
+.main-nav,.main-nav2 a:hover {
 	color: #FFA400;
 }
 
