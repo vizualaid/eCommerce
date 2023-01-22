@@ -17,6 +17,7 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 // import { AddProductComponent } from './add-product/add-product.component';
 // import { AddComponentComponent } from './add-component/add-component.component';
+import { ProductsService } from './service/products.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
     HttpClientModule
   ],
   providers: [
-    TitleCasePipe,
+    ProductsService,
+    
   ],
   bootstrap: [AppComponent]
 })

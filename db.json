@@ -42,6 +42,34 @@
       "email": "",
       "id": 7
     }
-    
+  ],
+  "products": [
+    {
+      "name": "phone 14",
+      "price": "100000",
+      "category": "Smart Phone",
+      "color": "black",
+      "description": " About this item:  15.40 cm (6.1-inch) Super Retina XDR display,  Advanced camera system for better photos in any light, Cinematic mode now in 4K Dolby Vision up to 30 fps, Action mode for smooth, steady, handheld videos, Vital safety technology — Crash Detection calls for help when you cant.",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight_AV1_GEO_EMEA?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1661026534564",
+      "id": 1
+    },
+    {
+      "name": "SamDug m334",
+      "price": "90,000",
+      "category": "Mobile/ Smart-Form",
+      "color": "Black",
+      "description": "excellent",
+      "image": "https://static.toiimg.com/thumb/resizemode-4,msid-70173673,width-250,imgv-1/70173673.jpg",
+      "id": 2
+    },
+    {
+      "name": "SamDug m334",
+      "price": "90,000",
+      "category": "Mobile/ Smart-Form",
+      "color": "Black",
+      "description": "excellent",
+      "image": "https://static.toiimg.com/thumb/resizemode-4,msid-70173673,width-250,imgv-1/70173673.jpg",
+      "id": 3
+    }
   ]
 }
